@@ -8,15 +8,22 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+#import "DRDropDownListView.h"
 
+@interface ViewController ()<UIGestureRecognizerDelegate>
+@property (weak, nonatomic) UIButton *B_openList;
 @end
 
-@implementation ViewController
+@implementation ViewController 
 
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
+  DRDropDownListView *v = [[DRDropDownListView alloc] initWithFrame:CGRectMake(100, 100, 150, 50) lists:@[@"A", @"B", @"C"] direction:DirectionDown option:OptionSingle];
+  v.backgroundColor = [UIColor redColor];
+  [self.view addSubview:v];
+  
+  
 }
 
 
