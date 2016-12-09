@@ -20,6 +20,7 @@ typedef enum : NSUInteger {
 
 @interface DRDropDownListView : UIView
 
+@property (nonatomic, strong) UILabel        *titleLabel;
 @property (nonatomic, strong) UILabel        *contentLabel;
 @property (nonatomic, strong) NSMutableArray *products;
 

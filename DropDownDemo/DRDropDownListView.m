@@ -37,8 +37,16 @@
 }
 
 - (void)addSubviews {
-  _contentLabel = [[UILabel alloc] initWithFrame:self.bounds];
-  _contentLabel.backgroundColor = [UIColor cyanColor];
+  _titleLabel = [[UILabel alloc] initWithFrame:
+             CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height / 2.0)];
+  _titleLabel.backgroundColor = [UIColor whiteColor];
+  [self addSubview:_titleLabel];
+  
+  _contentLabel = [[UILabel alloc] initWithFrame: CGRectMake(0,
+                                                             self.bounds.size.height / 2.0,
+                                                             self.bounds.size.width,
+                                                             self.bounds.size.height / 2.0)];
+  _contentLabel.backgroundColor = [UIColor whiteColor];
   [self addSubview:_contentLabel];
 }
 
